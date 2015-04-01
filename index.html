@@ -22,7 +22,7 @@
     
     @media (min-width: 979px) {
       #sidebar.affix-top {
-        position: fixed;
+        position: static;
         margin-top: 25px;
         width: 245px; /*228px*/
       }
@@ -186,26 +186,8 @@
                     <p><em>Article Title</em></p>
                     <a href="#" class="btn btn-default" role="button">Read <br>now</a>
                     <a href="#" class="btn btn-default" role="button">Mark<br>as read</a>
-                    <a href="#" class="btn btn-default" role="button" data-toggle="modal" data-target="#myModal">Remove <br>from list</a>
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Remove from list</h4>
-                              </div>
-                              
-                              <div class="modal-body">
-                                Are you sure you want to remove "ISU Faculty" from your reading list?
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Yes</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <a href="#" class="btn btn-default" role="button">Remove <br>from list</a>
+
                 </div>
             </div> 
         </div> 
@@ -233,10 +215,8 @@ $(function () {
 })
 </script>
 
-
 </body>
 
 </html>
-
 
 
