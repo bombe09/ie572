@@ -77,7 +77,7 @@
             Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
             dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
             eos qui ratione voluptatem sequi nesciunt niem soiem. 
-<a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="These are popovers from bootstrap but you can't add html code in it. You also have to change the javscript from on click to hover.">Click here
+<a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Article title will appear here" data-content="This will be the article intro content." data-readingtime="6 minutes" href="#">Click here
 </a>
             neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
             sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
@@ -98,7 +98,7 @@
             Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
             dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
             eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt                 <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="These are popovers from bootstrap but you can't add html code in it. You also have to change the javscript from on click to hover.">numquam eius modi
+            sed quia non numquam eius modi tempora incidunt                 <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Article title will appear here" data-content="This will be the article intro content." data-readingtime="6 minutes" href="#">numquam eius modi
 </a>
             ut labore et dolore magnam aliquam quaerat voluptatem. 
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
@@ -183,10 +183,10 @@
             <div class="thumbnail" id=sidebar>
                 <div class="caption">
                     <h3>Your Reading List</h3>
-                    <p><em>Article Title</em></p>
+                    <!--p><em>Article Title</em></p>
                     <a href="#" class="btn btn-default" role="button">Read <br>now</a>
                     <a href="#" class="btn btn-default" role="button">Mark<br>as read</a>
-                    <a href="#" class="btn btn-default" role="button">Remove <br>from list</a>
+                    <a href="#" class="btn btn-default" role="button">Remove <br>from list</a-->
 
                 </div>
             </div> 
@@ -211,7 +211,82 @@ $('#sidebar').affix({
 
 <script>
 $(function () {
-  $('[data-toggle="popover"]').popover()
+  //$('[data-toggle="popover"]').popover()
+  
+  // toggle modal on hover
+  $('[data-toggle="popover"]').hover( function(){
+    
+    // modal window template
+    var modalContent = '<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'+
+      '<div class="modal-dialog">'+
+        '<div class="modal-content">'+
+          '<div class="modal-header">'+
+            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+            '<h4 class="modal-title" id="myModalLabel">Article title</h4>'+
+          '</div>'+
+          '<div class="modal-body">'+
+            '<p>Estimated Reading Time: <span class="reading-time">[reading time to come]</span></p>'+
+            '<p class="intro">[ content introduction to come ][ read more ]</p>'+
+          '</div>'+
+          '<div class="modal-footer">'+
+            '<button type="button" class="btn btn-primary">Add to reading list</button>'+
+            '<button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>'+
+            '<button type="button" class="btn btn-default btn-disable" data-dismiss="modal">Disable</button>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+
+
+    // if the modal isn't already displaying...
+    if($(this).children('.modal').length < 1) {
+
+      // insert article specific information via search and replace
+      // article title
+      modalContent = modalContent.replace('Article title', $(this).attr('title'));
+      // article reading time
+      modalContent = modalContent.replace('[reading time to come]',$(this).attr('data-readingtime'));
+      // article intro content
+      modalContent = modalContent.replace('[ content introduction to come ]',$(this).attr('data-content'));
+      // article link
+      modalContent = modalContent.replace('[ read more ]', '<a href="'+$(this).attr('href')+'">Read More ></a>');
+
+      // add modal to document
+      $(this).append(modalContent);
+    }
+
+    $(this).children('.modal').fadeIn();
+
+  });
+
+
+  // close window when user adds item to reading list or clicks close
+  $(document).on( 'click', '.btn-primary, .close, .btn-close', function(){
+    // remove modal from document
+    $(this).parent().parent().parent().parent().remove();
+    // remove hover trigger class to allow window to completely close
+    $(this).parent().parent().parent().parent().parent().attr('data-toggle','');
+    setTimeout(function(){ 
+      $(this).parent().parent().parent().parent().parent().attr('data-toggle','popover');
+    }, 5000);
+  });
+
+
+  // add to reading list
+  $(document).on( 'click', '.btn-primary', function(){
+    // reading list item template
+    var readingListItem = '<p><em>[ article title to come ]</em></p>'+
+      '<a role="button" class="btn btn-default" href="#">Read <br>now</a>'+
+      '<a role="button" class="btn btn-default" href="#">Mark<br>as read</a>'+
+      '<a role="button" class="btn btn-default" href="#">Remove <br>from list</a>';
+
+    // replace title
+    // THIS DOESN'T WORK YET
+    //readingListItem = readingListItem.replace('[ article title to come ]',$('.modal-title').html());
+
+    // add item to reading list
+    $('#sidebar .caption').append(readingListItem);
+  });
 })
 </script>
 
