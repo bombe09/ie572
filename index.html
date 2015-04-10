@@ -22,15 +22,15 @@
     
     @media (min-width: 979px) {
       #sidebar.affix-top {
-        position: static;
+        position: fixed/*static*/;
         margin-top: 25px;
-        width: 245px; /*228px*/
+        width: 240px; /*228px*/
       }
       
       #sidebar.affix {
         position: fixed;
         top: 25px;
-        width: 245px;/*228px*/
+        width: 240px;/*228px*/
       }
     }
     
@@ -50,7 +50,20 @@
         word-wrap:break-word; 
         font-size: .9em;
     }
+    .subtitle{
+        color:#777;
+        font-style: italic;
+        font-weight: bold;
+        }
+        
+    p {
+        font-size: 1.1em;
+        line-height: 1.5em;
+        }
+
     </style>
+    
+
 
 </head>
 
@@ -58,7 +71,7 @@
 <header class="masthead">
   <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
       <h1><a href="#" title="scroll down for your viewing pleasure">Newsfeed Site</a>
         <p class="lead">Subtitle Information</p></h1>
     </div>
@@ -71,94 +84,59 @@
 <div class="container">
 	<div class="row">
 
-        <div class="col-md-9">
-            <h2>Content</h2>
+        <div class="col-md-7 col-md-offset-1">
+<!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
+            <h2>Meet Flyfit, The Fitness Tracker You Strap To Your Ankle
+</h2>
+            <p class="subtitle">Posted Feb 13, 2014 by Catherine Shu (@catherineshu)
+</p>
+            <img src="https://tctechcrunch2011.files.wordpress.com/2014/02/flyfit.png?w=1318" class="img-responsive" alt="Flyfit">
             <p>
-            Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt niem soiem. 
-<a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Article title will appear here" data-content="This will be the article intro content." data-readingtime="6 minutes" href="#">Click here
-</a>
-            neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-          
-          <p>
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non                 
-
-            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-          </p>
-            <p>
-          
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt                 <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Article title will appear here" data-content="This will be the article intro content." data-readingtime="6 minutes" href="#">numquam eius modi
-</a>
-            ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-          </p>
-          <p>
-          
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-          </p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+            When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys
+" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="#">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
             </p>
             <p>
-          
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-          </p>
-          <p>
-          
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-          </p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="#">Nike Fuelband</a>, aren’t even recommended for cycling.
+            </p>
+            <p>
+                Flyfit just launched its Kickstarter page today and wants to raise $90,000 by March 25. The early bird package starts at $89 for the first 200 supporters and includes a tracker and two interchangeable ankle bands. Shipment of mass produced Flyfit bands are scheduled for August, while beta test versions will be sent out in May.
+            </p>
+            <p>
+                Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="#">irritate your skin</a>, or snag on sleeves.
+            </p>
+            <p>
+                Chu says that she wanted to create an ankle monitor after realizing that her wristbands did not register movements accurately if she gripped her bike’s handlebars too tightly. For avid cyclists, the Flyfit is meant to be a portable alternative to cadence sensors that are installed on bicycle frames. Leu points out that this is especially handy if you use a bike lending service, like Citi Bike in New York City, or workout at the gym. Like a cadence sensor, the Flyfit lets you track distance, speed, and rotations per minute (RPM).
+            </p>
+            <p>
+                The app connects to an iOS app with Bluetooth 4.0/LE and lets you see your exercise data in real time, as long as you are willing to keep your eye on your smartphone while working out. Flyfit’s creators are working on an Android app and its development will be speeded up if the project reaches its $150,000 stretch goal. They also plan to open Flyfit’s API, add an online racing game so you can compete with your friends, and perhaps integrate it with other apps like Nike Run Keeper.
+            </p>
+            <p>
+                The tracker consists of a hardware module that is powered by a rechargeable Li-ion battery and interchangeable bands that are currently available in five colors. It has a simple LED panel that lets you check what activity you are tracking and battery life. The Flyfit claims to have an eight-hour battery life with real-time syncing and can run up to a week in off-sync mode.
+            </p>
+            <p>
+                The Flyfit may remind some people of the infamous ankle monitor worn by certain celebrities, like Lindsay Lohan, while under house arrest. The Flyfit is small and easy to hide, however, and can be worn over or under socks, so I can definitely see it appealing to people who are intrigued by wearable tech but sick of the ubiquitous wristband.
             </p>
             
         <hr>    
-        <h2>Related Content</h2>
         <div class="col-md-4">
+            <h2>Heading</h2>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
             totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+     
+            <p><a class="btn btn-default" href="#" role="button">View details </a></p>
         </div>
         <div class="col-md-4">
+            <h2>Heading</h2>
+
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
             totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+            <p><a class="btn btn-default" href="#" role="button">View details </a></p>
         </div>
         <div class="col-md-4">
+            <h2>Heading</h2>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            <p><a class="btn btn-default" href="#" role="button">View details </a></p> 
         </div>
             
            
@@ -194,7 +172,11 @@
       		
     		
   	</div> <!-- end row -->
-</div>
+  	<hr>
+  	<footer>
+  	    <small><p class="text-center">© Team 09 - The Bombe</p></small>
+  	</footer>
+</div> <!-- end container -->
 
 <!-- javascript -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
