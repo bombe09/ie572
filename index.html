@@ -34,6 +34,12 @@
       }
     }
     
+    #sidebar p {
+      border-top: 1px solid #ccc;
+      margin-top: 1em;
+      padding-top: 1em;
+    }
+
     .affix,.affix-top {
        position: static;
     }
@@ -49,6 +55,7 @@
         white-space:normal !important;
         word-wrap:break-word; 
         font-size: .9em;
+        margin-right: 1%;
     }
     .subtitle{
         color:#777;
@@ -180,7 +187,7 @@
 
 <!-- javascript -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script>
@@ -195,6 +202,8 @@ $('#sidebar').affix({
 $(function () {
   //$('[data-toggle="popover"]').popover()
   
+  $modalTitle = '';
+
   // toggle modal on hover
   $('[data-toggle="popover"]').hover( function(){
     
@@ -225,7 +234,8 @@ $(function () {
 
       // insert article specific information via search and replace
       // article title
-      modalContent = modalContent.replace('Article title', $(this).attr('title'));
+      $modalTitle = $(this).attr('title');
+      modalContent = modalContent.replace('Article title', $modalTitle);
       // article reading time
       modalContent = modalContent.replace('[reading time to come]',$(this).attr('data-readingtime'));
       // article intro content
@@ -257,18 +267,27 @@ $(function () {
   // add to reading list
   $(document).on( 'click', '.btn-primary', function(){
     // reading list item template
-    var readingListItem = '<p><em>[ article title to come ]</em></p>'+
+    var readingListItem = '<div>'+
+      '<p><em>[ article title to come ]</em></p>'+
       '<a role="button" class="btn btn-default" href="#">Read <br>now</a>'+
       '<a role="button" class="btn btn-default" href="#">Mark<br>as read</a>'+
-      '<a role="button" class="btn btn-default" href="#">Remove <br>from list</a>';
+      '<a role="button" class="btn btn-default remove" href="#">Remove <br>from list</a>'+
+      '</div>';
 
     // replace title
-    // THIS DOESN'T WORK YET
-    //readingListItem = readingListItem.replace('[ article title to come ]',$('.modal-title').html());
+    readingListItem = readingListItem.replace('[ article title to come ]',$modalTitle);
 
     // add item to reading list
     $('#sidebar .caption').append(readingListItem);
   });
+
+
+  // remove from reading list
+  //$(document).on( 'click', '.remove', function(){
+  //  if(confirm('Are you sure you would like to remove this item from your reading list?')) {
+  //    $(this).parent('div').remove();
+  //  }
+  //});
 })
 </script>
 
