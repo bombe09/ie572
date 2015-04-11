@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
-    <link rel="stylesheet"href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing</title>
+  <link rel="stylesheet"href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <style>
+  <style>
     /* bootstrap 3 helpers */
     
+    header {
+      background-color: #efefef;
+      margin-bottom: 2em;
+    }
+
+    img {
+      margin: 1em 0;
+    }
+
     .navbar-form input, .form-inline input {
-        width:auto;
+      width:auto;
     }
     
     /*
@@ -22,7 +31,7 @@
     
     @media (min-width: 979px) {
       #sidebar.affix-top {
-        position: fixed/*static*/;
+        position: static;
         margin-top: 25px;
         width: 240px; /*228px*/
       }
@@ -34,6 +43,11 @@
       }
     }
     
+    #sidebar h3 {
+      margin-top: 10px;
+      text-align: center;
+    }
+
     #sidebar p {
       border-top: 1px solid #ccc;
       margin-top: 1em;
@@ -41,87 +55,115 @@
     }
 
     .affix,.affix-top {
-       position: static;
+      position: static;
     }
     
     .thumbnail {
-        background-color: #EEE;
-    
+      background-color: #EEE;
     }
-    .thumbnail > .caption {
-        color: ;
+
+    /*.thumbnail > .caption {
+      color: ;
+    }*/
+
+    .btn {
+      white-space:normal !important;
+      word-wrap:break-word; 
+      font-size: .9em;
+      margin-right: 1%;
     }
-    .btn{
-        white-space:normal !important;
-        word-wrap:break-word; 
-        font-size: .9em;
-        margin-right: 1%;
-    }
+
+      #sidebar .btn {
+        width: 32.333%;
+      }
+
     .subtitle{
-        color:#777;
-        font-style: italic;
-        font-weight: bold;
-        }
-        
-    p {
-        font-size: 1.1em;
-        line-height: 1.5em;
-        }
+      color:#777;
+      font-style: italic;
+      /*font-weight: bold;*/
+    }
 
-    </style>
+    .modal {
+      bottom: 0;
+      opacity: 0.9;
+      overflow: visible;
+      position: absolute;
+      top: auto;
+    }
+
+      .modal:hover {
+        opacity: 1;
+      }
     
+    .col-md-4 {
+      margin-bottom: 2em;
+    }
 
+    .new-article {
+      border-top: 1px solid #ccc;
+      clear: both;
+      margin-top: 2em;
+      padding-top: 1em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+
+    a {
+      position: relative;
+    }
+
+  </style>
 
 </head>
 
-<body>  
-<header class="masthead">
-  <div class="container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h1><a href="#" title="scroll down for your viewing pleasure">Newsfeed Site</a>
-        <p class="lead">Subtitle Information</p></h1>
+<body> 
+
+  <header class="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1><a href="#" title="scroll down for your viewing pleasure">Newsfeed Site</a>
+            <p class="lead">Subtitle Information</p></h1>
+        </div>
+      </div>
     </div>
+  </header>	  	  	
 
-  </div>
-  </div>
-</header>	  	  	
-
-<!-- Begin Body -->
-<div class="container">
-	<div class="row">
+  <!-- Begin Body -->
+  <div class="container">
+  	<div class="row">
 
         <div class="col-md-7 col-md-offset-1">
-<!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
-            <h2>Meet Flyfit, The Fitness Tracker You Strap To Your Ankle
-</h2>
-            <p class="subtitle">Posted Feb 13, 2014 by Catherine Shu (@catherineshu)
-</p>
+            <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
+            <h2>Meet Flyfit, The Fitness Tracker You Strap To Your Ankle</h2>
+            <p class="subtitle">Posted Feb 13, 2014 by Catherine Shu (@catherineshu)</p>
             <img src="https://tctechcrunch2011.files.wordpress.com/2014/02/flyfit.png?w=1318" class="img-responsive" alt="Flyfit">
             <p>
-            When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys
-" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="#">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
+              When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="#">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
             </p>
             <p>
-                Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="#">Nike Fuelband</a>, aren’t even recommended for cycling.
+              Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="#">Nike Fuelband</a>, aren’t even recommended for cycling.
             </p>
             <p>
-                Flyfit just launched its Kickstarter page today and wants to raise $90,000 by March 25. The early bird package starts at $89 for the first 200 supporters and includes a tracker and two interchangeable ankle bands. Shipment of mass produced Flyfit bands are scheduled for August, while beta test versions will be sent out in May.
+              Flyfit just launched its Kickstarter page today and wants to raise $90,000 by March 25. The early bird package starts at $89 for the first 200 supporters and includes a tracker and two interchangeable ankle bands. Shipment of mass produced Flyfit bands are scheduled for August, while beta test versions will be sent out in May.
             </p>
             <p>
-                Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="#">irritate your skin</a>, or snag on sleeves.
+              Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="#">irritate your skin</a>, or snag on sleeves.
             </p>
             <p>
-                Chu says that she wanted to create an ankle monitor after realizing that her wristbands did not register movements accurately if she gripped her bike’s handlebars too tightly. For avid cyclists, the Flyfit is meant to be a portable alternative to cadence sensors that are installed on bicycle frames. Leu points out that this is especially handy if you use a bike lending service, like Citi Bike in New York City, or workout at the gym. Like a cadence sensor, the Flyfit lets you track distance, speed, and rotations per minute (RPM).
+              Chu says that she wanted to create an ankle monitor after realizing that her wristbands did not register movements accurately if she gripped her bike’s handlebars too tightly. For avid cyclists, the Flyfit is meant to be a portable alternative to cadence sensors that are installed on bicycle frames. Leu points out that this is especially handy if you use a bike lending service, like Citi Bike in New York City, or workout at the gym. Like a cadence sensor, the Flyfit lets you track distance, speed, and rotations per minute (RPM).
             </p>
             <p>
-                The app connects to an iOS app with Bluetooth 4.0/LE and lets you see your exercise data in real time, as long as you are willing to keep your eye on your smartphone while working out. Flyfit’s creators are working on an Android app and its development will be speeded up if the project reaches its $150,000 stretch goal. They also plan to open Flyfit’s API, add an online racing game so you can compete with your friends, and perhaps integrate it with other apps like Nike Run Keeper.
+              The app connects to an iOS app with Bluetooth 4.0/LE and lets you see your exercise data in real time, as long as you are willing to keep your eye on your smartphone while working out. Flyfit’s creators are working on an Android app and its development will be speeded up if the project reaches its $150,000 stretch goal. They also plan to open Flyfit’s API, add an online racing game so you can compete with your friends, and perhaps integrate it with other apps like Nike Run Keeper.
             </p>
             <p>
-                The tracker consists of a hardware module that is powered by a rechargeable Li-ion battery and interchangeable bands that are currently available in five colors. It has a simple LED panel that lets you check what activity you are tracking and battery life. The Flyfit claims to have an eight-hour battery life with real-time syncing and can run up to a week in off-sync mode.
+              The tracker consists of a hardware module that is powered by a rechargeable Li-ion battery and interchangeable bands that are currently available in five colors. It has a simple LED panel that lets you check what activity you are tracking and battery life. The Flyfit claims to have an eight-hour battery life with real-time syncing and can run up to a week in off-sync mode.
             </p>
             <p>
-                The Flyfit may remind some people of the infamous ankle monitor worn by certain celebrities, like Lindsay Lohan, while under house arrest. The Flyfit is small and easy to hide, however, and can be worn over or under socks, so I can definitely see it appealing to people who are intrigued by wearable tech but sick of the ubiquitous wristband.
+              The Flyfit may remind some people of the infamous ankle monitor worn by certain celebrities, like Lindsay Lohan, while under house arrest. The Flyfit is small and easy to hide, however, and can be worn over or under socks, so I can definitely see it appealing to people who are intrigued by wearable tech but sick of the ubiquitous wristband.
             </p>
             
         <hr>    
@@ -168,6 +210,7 @@
             <div class="thumbnail" id=sidebar>
                 <div class="caption">
                     <h3>Your Reading List</h3>
+                    <p class="no-items">There are no items in our reading list.</p>
                     <!--p><em>Article Title</em></p>
                     <a href="#" class="btn btn-default" role="button">Read <br>now</a>
                     <a href="#" class="btn btn-default" role="button">Mark<br>as read</a>
@@ -254,6 +297,8 @@ $(function () {
 
   // close window when user adds item to reading list or clicks close
   $(document).on( 'click', '.btn-primary, .close, .btn-close', function(){
+    // hide "There are no items..." message
+    $('.no-items').fadeOut();
     // remove modal from document
     $(this).parent().parent().parent().parent().remove();
     // remove hover trigger class to allow window to completely close
@@ -266,12 +311,16 @@ $(function () {
 
   // add to reading list
   $(document).on( 'click', '.btn-primary', function(){
+
+    // create unique id for article
+    var modalId = String($modalTitle).replace(' ','').substr(1, 10);
+
     // reading list item template
     var readingListItem = '<div>'+
       '<p><em>[ article title to come ]</em></p>'+
-      '<a role="button" class="btn btn-default" href="#">Read <br>now</a>'+
-      '<a role="button" class="btn btn-default" href="#">Mark<br>as read</a>'+
-      '<a role="button" class="btn btn-default remove" href="#">Remove <br>from list</a>'+
+      '<a class="btn btn-default" href="#'+modalId+'">Read now</a>'+
+      '<button class="btn btn-default">Mark as read</button>'+
+      '<button class="btn btn-default remove">Remove from list</button>'+
       '</div>';
 
     // replace title
@@ -279,6 +328,15 @@ $(function () {
 
     // add item to reading list
     $('#sidebar .caption').append(readingListItem);
+
+    var newArticleText = '<div id="'+modalId+'" class="new-article">'+
+      '<h2>'+$modalTitle+'</h2>'+
+      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
+      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
+      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
+      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
+      '</div>';
+    $('.col-md-7').append(newArticleText);
   });
 
 
@@ -286,6 +344,10 @@ $(function () {
   //$(document).on( 'click', '.remove', function(){
   //  if(confirm('Are you sure you would like to remove this item from your reading list?')) {
   //    $(this).parent('div').remove();
+  //    // show "There are no items..." message if user just removed last reading list item
+  //    if($('#sidebar p').not('.no-items').length < 1) {
+  //      $('.no-items').fadeIn();        
+  //    }
   //  }
   //});
 })
