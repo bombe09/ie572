@@ -118,6 +118,13 @@
     background-color: #E0EEEE;
       }
 
+    .normcolor {
+      color: #333;		
+    }
+
+    .lightgrey {
+      color: #b8b8b8; 	
+    }
   </style>
 
 </head>
@@ -388,11 +395,30 @@ $(function () {
     // create unique id for article
     var modalId = String($modalTitle).replace(' ','').substr(1, 10);
 
+    // mark as read or unread
+    $(document).on("click", "#mark", function() {
+	    if (readOrUnr == "U") {
+	      readOrUnr = "R";
+	    } else {
+	      readOrUnr = "U";
+	    }
+ 
+    });
+    
+    if (readOrUnr == "U") {
+	    var readText = "Mark as read";
+	    var colorCls = "normcolor";
+    } else {
+	    var readText = "Mark as unread";
+	    var colorCls = "lightgrey";	
+    }
+    
     // reading list item template
+
     var readingListItem = '<div>'+
-      '<p><em>[ article title to come ]</em></p>'+
+      '<p class="'+colorCls+'"><em>[ article title to come ]</em></p>'+
       '<a class="btn btn-default" href="#'+modalId+'">Read now</a>'+
-      '<button class="btn btn-default">Mark as read</button>'+
+      '<button class="btn btn-default" id="mark">'+readText+'</button>'+
       '<button class="btn btn-default remove">Remove from list</button>'+
       '</div>';
 
