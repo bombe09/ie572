@@ -345,7 +345,7 @@ $(function () {
           '<div class="modal-footer">'+
             '<button type="button" class="btn btn-primary">Add to reading list</button>'+
             '<button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>'+
-            '<button type="button" class="btn btn-default btn-disable" data-dismiss="modal">Disable</button>'+
+            //'<button type="button" class="btn btn-default btn-disable" data-dismiss="modal">Disable</button>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -395,35 +395,47 @@ $(function () {
     // create unique id for article
     var modalId = String($modalTitle).replace(' ','').substr(1, 10);
 
+
     // mark as read or unread
-    $(document).on("click", "#mark", function() {
-	    if (readOrUnr == "U") {
-	      readOrUnr = "R";
-	    } else {
-	      readOrUnr = "U";
-	    }
+    $readText = "Mark as read";
+    $colorCls = "normcolor";
+
+    $(document).on("click", ".mark", function(event) {
+
+      //if($(this).parent().attr('id') == $(event.target).parent().attr('id')) {
+
+  	    var _this = $(event.target);
+
+        if(_this.text() == "Mark as read") {
+          $readText = "Mark as unread";
+          $colorCls = "lightgrey"; 
+  	    } else {
+          $readText = "Mark as read";
+          $colorCls = "normcolor";
+        }
+
+        _this.parent().attr("class",$colorCls);
+        _this.text($readText);
+
+        // exit loop because we found a match
+        return false;
+      //}
  
     });
     
-    if (readOrUnr == "U") {
-	    var readText = "Mark as read";
-	    var colorCls = "normcolor";
-    } else {
-	    var readText = "Mark as unread";
-	    var colorCls = "lightgrey";	
-    }
-    
-    // reading list item template
 
-    var readingListItem = '<div>'+
-      '<p class="'+colorCls+'"><em>[ article title to come ]</em></p>'+
+    // reading list item template
+    var readingListItem = '<div class="'+$colorCls+'" id="item-'+modalId+'">'+
+      '<p><em>[ article title to come ]</em></p>'+
       '<a class="btn btn-default" href="#'+modalId+'">Read now</a>'+
-      '<button class="btn btn-default" id="mark">'+readText+'</button>'+
+      '<button class="btn btn-default mark">'+$readText+'</button>'+
       '<button class="btn btn-default remove">Remove from list</button>'+
       '</div>';
 
+
     // replace title
     readingListItem = readingListItem.replace('[ article title to come ]',$modalTitle);
+
 
     // add item to reading list
     $('#sidebar .caption').append(readingListItem);
@@ -440,15 +452,15 @@ $(function () {
 
 
   // remove from reading list
-  //$(document).on( 'click', '.remove', function(){
-  //  if(confirm('Are you sure you would like to remove this item from your reading list?')) {
-  //    $(this).parent('div').remove();
-  //    // show "There are no items..." message if user just removed last reading list item
-  //    if($('#sidebar p').not('.no-items').length < 1) {
-  //      $('.no-items').fadeIn();        
-  //    }
-  //  }
-  //});
+  $(document).on( 'click', '.remove', function(){
+    if(confirm('Are you sure you would like to remove this item from your reading list?')) {
+      $(this).parent('div').remove();
+      // show "There are no items..." message if user just removed last reading list item
+      if($('#sidebar p').not('.no-items').length < 1) {
+        $('.no-items').fadeIn();        
+      }
+    }
+  });
 })
 </script>
 
