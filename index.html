@@ -152,16 +152,16 @@
             <p class="subtitle">Posted Feb 13, 2014 by Catherine Shu (@catherineshu)</p>
             <img src="https://tctechcrunch2011.files.wordpress.com/2014/02/flyfit.png?w=1318" class="img-responsive" alt="Flyfit">
             <p>
-              When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="#">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
+              When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="index.html?article=Wearables">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
             </p>
             <p>
-              Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="#">Nike Fuelband</a>, aren’t even recommended for cycling.
+              Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="index.html?article=NikeIntro">Nike Fuelband</a>, aren’t even recommended for cycling.
             </p>
             <p>
               Flyfit just launched its Kickstarter page today and wants to raise $90,000 by March 25. The early bird package starts at $89 for the first 200 supporters and includes a tracker and two interchangeable ankle bands. Shipment of mass produced Flyfit bands are scheduled for August, while beta test versions will be sent out in May.
             </p>
             <p>
-              Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="#">irritate your skin</a>, or snag on sleeves.
+              Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="index.html?article=FitbitOff">irritate your skin</a>, or snag on sleeves.
             </p>
             <p>
               Chu says that she wanted to create an ankle monitor after realizing that her wristbands did not register movements accurately if she gripped her bike’s handlebars too tightly. For avid cyclists, the Flyfit is meant to be a portable alternative to cadence sensors that are installed on bicycle frames. Leu points out that this is especially handy if you use a bike lending service, like Citi Bike in New York City, or workout at the gym. Like a cadence sensor, the Flyfit lets you track distance, speed, and rotations per minute (RPM).
@@ -258,7 +258,7 @@
           <p>Category convergence is therefore expected, in much the same way that the smartphone gobbled up and extended the basic functionalities of the feature phone. “Increasingly, smart bands will adopt basic band features as the two categories converge,” added Jones.</p> 
 
           <p>As for what wearable bands are for, that’s set to expand, too. Canalys said it sees a huge opportunity for expansion into the medical and wellness segment, moving out from the current focus on a “relatively small market” addressing fitness enthusiasts. That expectation meshes with the rumours around Apple’s health focus for a forthcoming iWatch and iOS 8. </p> 
-    	 </div> <!-- End of Article 2 -->
+    	  </div> <!-- End of Article 2 -->
         <!-- article 3-->
 
         <div class="col-md-7 col-md-offset-1" style="display:none" id="article-NikeIntro">
@@ -464,7 +464,14 @@ $(function () {
       }
     }
   });
-})
+
+
+  var articleIdVal = window.location.search.replace('?article=','');
+  if(articleIdVal !== '') {
+    $('.main-content').html($('#article-'+articleIdVal).html());
+  }
+
+});
 </script>
 
 </body>
