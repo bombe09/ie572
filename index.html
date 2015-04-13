@@ -43,26 +43,49 @@
       }
     }
     
-    #sidebar h3 {
-      margin-top: 10px;
-      text-align: center;
+    .btn-default {
+      background-color: rgba(255,255,255,0.5);
     }
 
-    #sidebar p {
-      border-top: 1px solid #ccc;
-      margin-top: 1em;
-      padding-top: 1em;
+      .btn-default:hover {
+        background-color: rgba(255,255,255,0.75);
+      }
+
+    .btn-primary { 
+      background-color: #b5d8a6; 
+      border-color: #b5d8a6; 
+      color: #000;
     }
+
+      .btn-primary:hover {
+        background-color: #92c57a;
+        color: #000;
+      }
+
+    .reading-list { 
+      background-color: #b5d8a6; 
+    }
+
+      .reading-list h3 {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .reading-list p {
+        border-top: 1px solid rgba(0,0,0,0.25);
+        margin-top: 1em;
+        padding-top: 1em;
+      }
 
     .affix,.affix-top {
       position: static;
     }
     
-    .thumbnail {
+    /*.thumbnail {
       background-color: #EEE;
     }
 
-    /*.thumbnail > .caption {
+    .thumbnail > .caption {
       color: ;
     }*/
 
@@ -84,6 +107,7 @@
 
     .modal {
       bottom: 0;
+      color: #000;
       opacity: 0.9;
       overflow: visible;
       position: absolute;
@@ -115,16 +139,35 @@
     }
     
     .bgcolor {
-    background-color: #E0EEEE;
-      }
+      background-color: #cee2f4;
+    }
 
     .normcolor {
-      color: #333;		
+      color: #333;    
     }
 
     .lightgrey {
-      color: #b8b8b8; 	
+      color: rgba(0,0,0,0.25);  
     }
+
+    .confirmMsg {
+      background-color: #FFD700;
+      margin-top: 3px;
+      padding: 1em;
+    }
+
+      .confirmMsg div {
+        margin-bottom: 0.5em;
+      }
+      
+      .confirmMsg .btn {
+        background-color: #FFE766;
+      }
+
+      .confirm-no {
+        float: right;
+      }
+
   </style>
 
 </head>
@@ -140,28 +183,29 @@
         </div>
       </div>
     </div>
-  </header>	  	  	
+  </header>         
 
   <!-- Begin Body -->
   <div class="container">
-  	<div class="row">
+    <div class="row">
 
-        <div class="col-md-7 col-md-offset-1">
+        <div class="col-md-7 col-md-offset-1 main-content">
             <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
             <h2>Meet Flyfit, The Fitness Tracker You Strap To Your Ankle</h2>
+            <p><em>Estimated Reading Time: 6 minutes</em></p>
             <p class="subtitle">Posted Feb 13, 2014 by Catherine Shu (@catherineshu)</p>
             <img src="https://tctechcrunch2011.files.wordpress.com/2014/02/flyfit.png?w=1318" class="img-responsive" alt="Flyfit">
             <p>
-              When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="#">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
+              When you think about it, it’s odd that wearable tech makers are so obsessed with wristbands. Most wearable tech products <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys" data-content="The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys..." data-readingtime="7 minutes" href="index.html?article=Wearables">currently focus on fitness</a>, and the most popular cardio exercises–biking, running, swimming–are powered by the lower body.
             </p>
             <p>
-              Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes" href="#">Nike Fuelband</a>, aren’t even recommended for cycling.
+              Husband-and-wife team Jimmy Leu and Beatrice Chu created Flyfit, a fitness monitor that is worn on the ankle, after Chu, an avid cyclist, got annoyed that other fitness trackers weren’t accurately recording her workouts. Several of the bestselling fitness trackers, including the <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick" data-content="Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction" data-readingtime="5 minutes..." href="index.html?article=NikeIntro">Nike Fuelband</a>, aren’t even recommended for cycling.
             </p>
             <p>
               Flyfit just launched its Kickstarter page today and wants to raise $90,000 by March 25. The early bird package starts at $89 for the first 200 supporters and includes a tracker and two interchangeable ankle bands. Shipment of mass produced Flyfit bands are scheduled for August, while beta test versions will be sent out in May.
             </p>
             <p>
-              Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis." data-readingtime="5 minutes" href="#">irritate your skin</a>, or snag on sleeves.
+              Flyfit is one of the latest entrants to the wearable tech market, but its creators want to differentiate by focusing specifically on measuring different leg movements for cycling, swimming, running, or stair climbing. Plus, it will appeal to people who dislike wristbands, which are meant to be worn all day, but tend to get in the way while typing, <a tabindex="0"  data-toggle="popover" data-trigger="focus" title="Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation" data-content="Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis..." data-readingtime="5 minutes" href="index.html?article=FitbitOff">irritate your skin</a>, or snag on sleeves.
             </p>
             <p>
               Chu says that she wanted to create an ankle monitor after realizing that her wristbands did not register movements accurately if she gripped her bike’s handlebars too tightly. For avid cyclists, the Flyfit is meant to be a portable alternative to cadence sensors that are installed on bicycle frames. Leu points out that this is especially handy if you use a bike lending service, like Citi Bike in New York City, or workout at the gym. Like a cadence sensor, the Flyfit lets you track distance, speed, and rotations per minute (RPM).
@@ -176,136 +220,116 @@
               The Flyfit may remind some people of the infamous ankle monitor worn by certain celebrities, like Lindsay Lohan, while under house arrest. The Flyfit is small and easy to hide, however, and can be worn over or under socks, so I can definitely see it appealing to people who are intrigued by wearable tech but sick of the ubiquitous wristband.
             </p>
             
-        <hr> 
-        <div class="col-md-12 bgcolor">
-            <h2>More News</h2>
-        </div>   
-        <div class="col-md-6 bgcolor">
-            <h3> Conservative suing University of Iowa plans book about her bias case </h3>
-            <small><p >A woman who claims the University of Iowa law school rejected her for faculty jobs because of her conservative beliefs is writing a book about her discrimination lawsuit even before the case is over, her attorney confirmed Thursday.</p></small>
-     
-            <p><a  href="http://www.omaha.com/news/iowa/conservative-suing-university-of-iowa-plans-book-about-her-bias/article_f9aad52c-ded0-11e4-baf7-3709635eb2e1.html" target="_blank"class="btn btn-default" role="button">View details </a></p>
-        </div>
-        <div class="col-md-6 bgcolor">
-            <h3> Letter writing's role to be in spotlight at Neihardt Spring Conference </h3>
-<small><p>The annual Neihardt Spring Conference on April 25 will focus on the role of letters for people living in the Great Plains region in the 19th and 20th centuries and will address the role of letter-writing in American history.</p></small>
-
-            <p><a href="http://www.omaha.com/news/nebraska/letter-writing-s-role-in-history-to-be-in-spotlight/article_219a9a64-18df-5d63-a8aa-914079882a19.html" target="_blank" class="btn btn-default" role="button">View details </a></p>
-        </div>
-        <!-- <div class="col-md-4">
-            <h2>Heading</h2>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-            <p><a class="btn btn-default" href="#" role="button">View details </a></p> 
-        </div> -->
-            
+          <hr> 
+          <div class="bgcolor clearfix">
+            <div class="col-md-12">
+                <h2>More News</h2>
+            </div>   
+            <div class="col-md-6">
+                <h3> Conservative suing University of Iowa plans book about her bias case </h3>
+                <p><em>Estimated Reading Time: 6 minutes</em></p>
+                <p><small>A woman who claims the University of Iowa law school rejected her for faculty jobs because of her conservative beliefs is writing a book about her discrimination lawsuit even before the case is over, her attorney confirmed Thursday. <a href="http://www.omaha.com/news/iowa/conservative-suing-university-of-iowa-plans-book-about-her-bias/article_f9aad52c-ded0-11e4-baf7-3709635eb2e1.html" target="_blank">Read More ></a></small></p>
+            </div>
+            <div class="col-md-6">
+                <h3> Letter writing's role to be in spotlight at Neihardt Spring Conference </h3>
+                <p><em>Estimated Reading Time: 5 minutes</em></p>
+                <p><small>The annual Neihardt Spring Conference on April 25 will focus on the role of letters for people living in the Great Plains region in the 19th and 20th centuries and will address the role of letter-writing in American history. <a href="http://www.omaha.com/news/nebraska/letter-writing-s-role-in-history-to-be-in-spotlight/article_219a9a64-18df-5d63-a8aa-914079882a19.html" target="_blank">Read More ></a></small></p>
+            </div>
+          </div>            
            
         </div> <!-- end div content -->
         
+
         <div class="col-md-3">  
-            <!--        
-            <div class="list-group" id="sidebar">
-              <a href="#" class="list-group-item">
-                Link 1
-              </a>
-              <a href="#" class="list-group-item">Responsive
-              </a>
-              <a href="#" class="list-group-item">Mobile First
-              </a>
-              <a href="#" class="list-group-item">CSS 3
-              </a>
-              <a href="#" class="list-group-item">HTML 5
-              </a>
-            </div> 
-            -->
-            <div class="thumbnail" id="sidebar" style="background-color:#A2DED0  ">
-                <div class="caption">
-                    <h3>Your Reading List</h3>
-                    <p class="no-items">There are no items in your reading list.</p>
-                    <!--p><em>Article Title</em></p>
-                    <a href="#" class="btn btn-default" role="button">Read <br>now</a>
-                    <a href="#" class="btn btn-default" role="button">Mark<br>as read</a>
-                    <a href="#" class="btn btn-default" role="button">Remove <br>from list</a-->
-
-                </div>
-            </div> 
+          <div class="thumbnail reading-list" id="sidebar">
+              <div class="caption">
+                  <h3>Your Reading List</h3>
+                  <p class="no-items">There are no items in your reading list.</p>
+              </div>
+          </div> 
         </div> 
+
         <!-- Article 2 -->
-        <div class="col-md-7 col-md-offset-1" style="display:none">
-            <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
-            <h2>Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys</h2>
-            <p class="subtitle">Posted Feb 12, 2014 by Natasha Lomas (@riptari)</p>
-            <img src="http://tctechcrunch2011.files.wordpress.com/2014/02/screen-shot-2014-02-12-at-11-21-27-am.png?w=680&h=402" class="img-responsive" alt="Pie chart of wearable band vendors" >
-            <p>The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys.</p>
+        <div class="col-md-7 col-md-offset-1" style="display:none" id="article-Wearables">
+          <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
+          <h2>Wearables Market Heating Up, With More Than 17M Bands Forecast To Ship This Year, Says Canalys</h2>
+          <p><em>Estimated Reading Time: 5 minutes</em></p>
+          <p class="subtitle">Posted Feb 12, 2014 by Natasha Lomas (@riptari)</p>
+          <img src="http://tctechcrunch2011.files.wordpress.com/2014/02/screen-shot-2014-02-12-at-11-21-27-am.png?w=680&h=402" class="img-responsive" alt="Pie chart of wearable band vendors" >
+          <p>The wearables device market is still in its infancy but it’s growing fast — with more than 17 million wearable bands forecast to ship this year, according to a new forecast by Canalys.</p>
 
-<p>It reckons 2014 will be the year that wearables become a “key consumer technology,” and is predicting the smart band segment alone will reach 8 million annual shipments, growing to more than 23 million units by 2015 and over 45 million by 2017.</p>
+          <p>It reckons 2014 will be the year that wearables become a “key consumer technology,” and is predicting the smart band segment alone will reach 8 million annual shipments, growing to more than 23 million units by 2015 and over 45 million by 2017.</p>
 
-<p>The analyst said shipments of both basic band wearables (aka the Fitbit) and smart band wearables (aka fully fledged smart watches that can run apps) grew dramatically in the second half of last year — with Fitbit pushing into the lead spot in the wearable band market, thanks to the affordable Flex and Force bands.</p>
+          <p>The analyst said shipments of both basic band wearables (aka the Fitbit) and smart band wearables (aka fully fledged smart watches that can run apps) grew dramatically in the second half of last year — with Fitbit pushing into the lead spot in the wearable band market, thanks to the affordable Flex and Force bands.</p>
 
-<p>Fitbit dominated the market for “basic bands,” according to Canalys’ market estimates, with more than 50 percent market share in the second half of the year. The Jawbone UP came second, cutting itself around a fifth of the pie, followed by Nike with its Fuelband.</p>
-      		
-<p>Meanwhile, at the emerging “smart band” end of the market — where an Apple iWatch would live should Cupertino ever unbox one — Samsung is the earlier leader, with its Galaxy Gear smart watch accounting for the majority of smart band shipments. Sony (actually a relative veteran of the smartwatch space) came second, taking almost a fifth of the market, closely followed by Pebble.</p>
+          <p>Fitbit dominated the market for “basic bands,” according to Canalys’ market estimates, with more than 50 percent market share in the second half of the year. The Jawbone UP came second, cutting itself around a fifth of the pie, followed by Nike with its Fuelband.</p>
+                    
+          <p>Meanwhile, at the emerging “smart band” end of the market — where an Apple iWatch would live should Cupertino ever unbox one — Samsung is the earlier leader, with its Galaxy Gear smart watch accounting for the majority of smart band shipments. Sony (actually a relative veteran of the smartwatch space) came second, taking almost a fifth of the market, closely followed by Pebble.</p>
 
-<p>Samsung gained its early lead thanks to a “major marketing push,” said Canalys analyst Chris Jones, but he added that the company is likely to have to keep throwing money at the category to improve sell-through. The Gear did not review terribly well.</p>
+          <p>Samsung gained its early lead thanks to a “major marketing push,” said Canalys analyst Chris Jones, but he added that the company is likely to have to keep throwing money at the category to improve sell-through. The Gear did not review terribly well.</p>
 
-<p>“Samsung launched the Galaxy Gear with a major marketing push that gained significant consumer interest. Shipments of the device took Samsung to the top of the smart band category, though disappointing sell-through will necessitate more promotional activity in coming months,” he noted in a statement.</p>
+          <p>“Samsung launched the Galaxy Gear with a major marketing push that gained significant consumer interest. Shipments of the device took Samsung to the top of the smart band category, though disappointing sell-through will necessitate more promotional activity in coming months,” he noted in a statement.</p>
 
-<p>Although basic band wearables have shipped in greater numbers to date than smart bands, having had the launch jump on their fancier rivals, the latter category is already growing faster, according to Canalys.</p> 
+          <p>Although basic band wearables have shipped in greater numbers to date than smart bands, having had the launch jump on their fancier rivals, the latter category is already growing faster, according to Canalys.</p> 
 
-<p>The analyst said smart bands are also likely to consume the functionality of their more basic category predecessor — which will presumably eat into basic bands’ market share in future, as smart band launches proliferate and shipments continue to grow.</p> 
+          <p>The analyst said smart bands are also likely to consume the functionality of their more basic category predecessor — which will presumably eat into basic bands’ market share in future, as smart band launches proliferate and shipments continue to grow.</p> 
 
-<p>Category convergence is therefore expected, in much the same way that the smartphone gobbled up and extended the basic functionalities of the feature phone. “Increasingly, smart bands will adopt basic band features as the two categories converge,” added Jones.</p> 
+          <p>Category convergence is therefore expected, in much the same way that the smartphone gobbled up and extended the basic functionalities of the feature phone. “Increasingly, smart bands will adopt basic band features as the two categories converge,” added Jones.</p> 
 
-<p>As for what wearable bands are for, that’s set to expand, too. Canalys said it sees a huge opportunity for expansion into the medical and wellness segment, moving out from the current focus on a “relatively small market” addressing fitness enthusiasts. That expectation meshes with the rumours around Apple’s health focus for a forthcoming iWatch and iOS 8. </p> 
-    	</div> <!-- End of Article 2 -->
+          <p>As for what wearable bands are for, that’s set to expand, too. Canalys said it sees a huge opportunity for expansion into the medical and wellness segment, moving out from the current focus on a “relatively small market” addressing fitness enthusiasts. That expectation meshes with the rumours around Apple’s health focus for a forthcoming iWatch and iOS 8. </p> 
+        </div> <!-- End of Article 2 -->
         <!-- article 3-->
-        <div class="col-md-7 col-md-offset-1" style="display:none">
-            <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
-            <h2>Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick</h2>
-            <p class="subtitle"> Posted Oct 15, 2013 by Darrell Etherington (@etherington)</p>
-            <img src="https://tctechcrunch2011.files.wordpress.com/2013/10/fuelband-se.jpeg?w=400" class="img-responsive" alt="Nike Fuelband" style="float:left; margin-right:2em">
-<p>Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction.</p>
 
-<p>The FuelBand, for those who aren’t familiar, is a wearable wristband that provides users with a visual readout of their steps taken during the course of a day, and also offers up a ‘Fuel’ tally, which is a metric made up by Nike that calculates based on your activity level through things like walking, running, paying basketball and more. They don’t share much about how they come up with that number, but it’s likely not terribly scientific and meant primarily as a motivation device to get people moving more frequently.</p>
+        <div class="col-md-7 col-md-offset-1" style="display:none" id="article-NikeIntro">
+          <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
+          <h2>Nike Introduces New Nike+ FuelBand SE, An Activity Tracker That’s Harder To Trick</h2>
+          <p><em>Estimated Reading Time: 6 minutes</em></p>
+          <p class="subtitle"> Posted Oct 15, 2013 by Darrell Etherington (@etherington)</p>
+          <img src="https://tctechcrunch2011.files.wordpress.com/2013/10/fuelband-se.jpeg?w=400" class="img-responsive" alt="Nike Fuelband" style="float:left; margin-right:2em">
+          <p>Nike is revealing a new version of its FuelBand today at an event in New York City. Dubbed the FuelBand SE, the new fitness tracker sports a variety of color accents and represents the sporting goods maker’s first non-cosmetic update to its activity tracking wearable since the gadget’s introduction.</p>
 
-<p>This new second-generation product has a similar design to the original version (but with red, pink or yellow accents), with a rubberized band that fits snugly around the wrist available in different sizes. This edition is intended to be better at encouraging users to move, and harder to cheat with. Nike reports that doing things like punching your fist in the air to game your score won’t up your Fuel score, according to CNET. It also looks to offer up better ability to differentiate between different types of activity, like cycling, spinning and rowing.</p>
+          <p>The FuelBand, for those who aren’t familiar, is a wearable wristband that provides users with a visual readout of their steps taken during the course of a day, and also offers up a ‘Fuel’ tally, which is a metric made up by Nike that calculates based on your activity level through things like walking, running, paying basketball and more. They don’t share much about how they come up with that number, but it’s likely not terribly scientific and meant primarily as a motivation device to get people moving more frequently.</p>
 
-<p>Nike’s new hardware is sealed and waterproofed, making it usable in the shower, and it’s got a highly refined motion detection algorithm. There are regular reminders (once hourly) to prompt you to get up and stop being so lazy, and there’s a new shortcut to let you double tap the button to access time. It uses Bluetooth 4.0, too, which should make it easier to sync data and provide a bit of a battery boost. There’s also a brand new app redesign to do along with it, with more granular and informative charts and graphs related to activity data. A new Fuel-per-minute metric offers a look at your average intensity, rather than just cumulative activity totals.</p>
+          <p>This new second-generation product has a similar design to the original version (but with red, pink or yellow accents), with a rubberized band that fits snugly around the wrist available in different sizes. This edition is intended to be better at encouraging users to move, and harder to cheat with. Nike reports that doing things like punching your fist in the air to game your score won’t up your Fuel score, according to CNET. It also looks to offer up better ability to differentiate between different types of activity, like cycling, spinning and rowing.</p>
 
-<p>Finally, there’s sleep tracking, which the first generation device lacked entirely. Sleep tracking is available to users of the Fitbit Flex, and the Jawbone Up, so that’s a huge addition in terms of playing catchup with the competition. The FuelBand SE is still iOS only, however, so don’t expect an Android app anytime soon. Users not in the Apple flock can still use the website, however. Nike has also launched “Fuel Lab,” a 12-week program designed to help companies launch integrations of its Nike+ and NikeFuel APIs and SDKs, which offers $50,000 to each of 10 companies chosen to take part.</p>
+          <p>Nike’s new hardware is sealed and waterproofed, making it usable in the shower, and it’s got a highly refined motion detection algorithm. There are regular reminders (once hourly) to prompt you to get up and stop being so lazy, and there’s a new shortcut to let you double tap the button to access time. It uses Bluetooth 4.0, too, which should make it easier to sync data and provide a bit of a battery boost. There’s also a brand new app redesign to do along with it, with more granular and informative charts and graphs related to activity data. A new Fuel-per-minute metric offers a look at your average intensity, rather than just cumulative activity totals.</p>
 
-<p>The FuelBand SE will be available on November 6, along with the updated iPhone app and the Nike Move app debuted at the iPhone 5s reveal. The FuelBand will cost $149, and ship initially in the U.S., UK, Canada, France Germany and Japan, with pre-orders kicking off today.</p>
-    		    
+          <p>Finally, there’s sleep tracking, which the first generation device lacked entirely. Sleep tracking is available to users of the Fitbit Flex, and the Jawbone Up, so that’s a huge addition in terms of playing catchup with the competition. The FuelBand SE is still iOS only, however, so don’t expect an Android app anytime soon. Users not in the Apple flock can still use the website, however. Nike has also launched “Fuel Lab,” a 12-week program designed to help companies launch integrations of its Nike+ and NikeFuel APIs and SDKs, which offers $50,000 to each of 10 companies chosen to take part.</p>
+
+          <p>The FuelBand SE will be available on November 6, along with the updated iPhone app and the Nike Move app debuted at the iPhone 5s reveal. The FuelBand will cost $149, and ship initially in the U.S., UK, Canada, France Germany and Japan, with pre-orders kicking off today.</p>
+            
         </div> <!-- end of article 3 -->
         
+
         <!-- Article 4 -->
-        <div class="col-md-7 col-md-offset-1" style="display:none">
-            <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
-            <h2>Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation</h2>
-            <p class="subtitle"> Posted Jan 15, 2014 by Darrell Etherington (@etherington)</p>
-            <img src="https://tctechcrunch2011.files.wordpress.com/2013/12/fitbit-force.png?w=676" class="img-responsive" alt="Fitbit">
-<p>Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis.</p>
+        <div class="col-md-7 col-md-offset-1" style="display:none" id="article-FitbitOff">
+          <!-- source: http://techcrunch.com/2014/02/13/flyfit/ -->
+          <h2>Fitbit Offering Refunds Or Device Swaps To Owners Of Force Wristband With Skin Irritation</h2>
+          <p><em>Estimated Reading Time: 4 minutes</em></p>
+          <p class="subtitle"> Posted Jan 15, 2014 by Darrell Etherington (@etherington)</p>
+          <img src="https://tctechcrunch2011.files.wordpress.com/2013/12/fitbit-force.png?w=676" class="img-responsive" alt="Fitbit">
+          <p>Fitness device maker Fitbit is offering up an honest deal to customers who are reporting that their Fitbit Force is causing them skin irritation: you can either get a full refund, or swap out your tracker for a different one from the Fitbit line, the assumption being that you’ll likely opt for one that won’t continually touch your epidermis.</p>
 
-<p>The Fitbit Force is admittedly designed to be worn all the time (it even tracks sleep while worn in bed), so it isn’t surprising that people are doing just that. But it’s also not surprising that such behavior results in irritated skin and rashes. Think about it: what else do you wear on your body all the time without any breaks for at all for days on end?</p>
+          <p>The Fitbit Force is admittedly designed to be worn all the time (it even tracks sleep while worn in bed), so it isn’t surprising that people are doing just that. But it’s also not surprising that such behavior results in irritated skin and rashes. Think about it: what else do you wear on your body all the time without any breaks for at all for days on end?</p>
 
-<p>For those who haven’t ever had the extreme pleasure of breaking a bone, wearing a cast produces similar results. It’s impossible to have one enrobing any of your limbs and escape without some kind of skin irritation, simply because skin isn’t designed to be encased by anything for any significant length of time.</p>
+          <p>For those who haven’t ever had the extreme pleasure of breaking a bone, wearing a cast produces similar results. It’s impossible to have one enrobing any of your limbs and escape without some kind of skin irritation, simply because skin isn’t designed to be encased by anything for any significant length of time.</p>
 
-<p>I don’t doubt that people are getting rashes from the Fitbit Force, and multiple news reports now depict the effects, but I also honestly think this is much more of a “well what did you expect” situation than an “OMG FITBIT POISONS PEOPLE WTF!!!1!!” scenario. Kudos to Fitbit for stepping up and offering a full refund, or a replacement from its lineup complete with free shipping and a restoration of any difference in final purchase price.</p>
+          <p>I don’t doubt that people are getting rashes from the Fitbit Force, and multiple news reports now depict the effects, but I also honestly think this is much more of a “well what did you expect” situation than an “OMG FITBIT POISONS PEOPLE WTF!!!1!!” scenario. Kudos to Fitbit for stepping up and offering a full refund, or a replacement from its lineup complete with free shipping and a restoration of any difference in final purchase price.</p>
 
-<p>Here’s the full statement from Fitbit on the issue, updated as of this morning:</p>
-<blockquote>
-  <p>We are looking into reports from a very limited number of Fitbit Force users who have been experiencing skin irritation, possibly as a result of an allergy to nickel, an element of surgical-grade stainless steel used in the device. </p>
-  <p>We suggest that consumers experiencing any irritation discontinue using the product and contact Fitbit atforce@fitbit.com if they have additional questions. Customers may also contact Fitbit for an immediate refund or replacement with a different Fitbit product.</p>
-  <p>We are sorry that even a few consumers have experienced these problems and assure you that we are looking at ways to modify the product so that anyone can wear the Fitbit Force comfortably. We will continue to update our customers with the latest information.</p>
-</blockquote>
+          <p>Here’s the full statement from Fitbit on the issue, updated as of this morning:</p>
+          <blockquote>
+            <p>We are looking into reports from a very limited number of Fitbit Force users who have been experiencing skin irritation, possibly as a result of an allergy to nickel, an element of surgical-grade stainless steel used in the device. </p>
+            <p>We suggest that consumers experiencing any irritation discontinue using the product and contact Fitbit atforce@fitbit.com if they have additional questions. Customers may also contact Fitbit for an immediate refund or replacement with a different Fitbit product.</p>
+            <p>We are sorry that even a few consumers have experienced these problems and assure you that we are looking at ways to modify the product so that anyone can wear the Fitbit Force comfortably. We will continue to update our customers with the latest information.</p>
+          </blockquote>
             
-            </div> <!-- end of article 4-->    		
-    		
-  	</div> <!-- end row -->
-  	<hr>
-  	<footer>
-  	    <small><p class="text-center">© Team 09 - The Bombe</p></small>
-  	</footer>
+        </div> <!-- end of article 4-->       
+        
+    </div> <!-- end row -->
+    <hr>
+    <footer>
+        <small><p class="text-center">© Team 09 - The Bombe</p></small>
+    </footer>
 </div> <!-- end container -->
 
 <!-- javascript -->
@@ -318,7 +342,7 @@ $('#sidebar').affix({
       offset: {
         top: $('header').height()
       }
-});	
+}); 
 </script>
 
 <script>
@@ -339,8 +363,8 @@ $(function () {
             '<h4 class="modal-title" id="myModalLabel">Article title</h4>'+
           '</div>'+
           '<div class="modal-body">'+
-            '<p>Estimated Reading Time: <span class="reading-time">[reading time to come]</span></p>'+
-            '<p class="intro">[ content introduction to come ][ read more ]</p>'+
+            '<p><em>Estimated Reading Time: <span class="reading-time">[reading time to come]</span></em></p>'+
+            '<p class="intro">[ content introduction to come ] [ read more ]</p>'+
           '</div>'+
           '<div class="modal-footer">'+
             '<button type="button" class="btn btn-primary">Add to reading list</button>'+
@@ -378,7 +402,7 @@ $(function () {
   // close window when user adds item to reading list or clicks close
   $(document).on( 'click', '.btn-primary, .close, .btn-close', function(){
     // hide "There are no items..." message
-    $('.no-items').fadeOut();
+    $('.no-items').fadeOut('fast');
     // remove modal from document
     $(this).parent().parent().parent().parent().remove();
     // remove hover trigger class to allow window to completely close
@@ -386,6 +410,8 @@ $(function () {
     setTimeout(function(){ 
       $(this).parent().parent().parent().parent().parent().attr('data-toggle','popover');
     }, 5000);
+
+    return false;
   });
 
 
@@ -393,7 +419,7 @@ $(function () {
   $(document).on( 'click', '.btn-primary', function(){
 
     // create unique id for article
-    var modalId = String($modalTitle).replace(' ','').substr(1, 10);
+    var modalId = String($modalTitle).replace(' ','').substr(0, 9);
 
 
     // mark as read or unread
@@ -403,13 +429,12 @@ $(function () {
     $(document).on("click", ".mark", function(event) {
 
       //if($(this).parent().attr('id') == $(event.target).parent().attr('id')) {
-
-  	    var _this = $(event.target);
+        var _this = $(event.target);
 
         if(_this.text() == "Mark as read") {
           $readText = "Mark as unread";
           $colorCls = "lightgrey"; 
-  	    } else {
+        } else {
           $readText = "Mark as read";
           $colorCls = "normcolor";
         }
@@ -427,7 +452,7 @@ $(function () {
     // reading list item template
     var readingListItem = '<div class="'+$colorCls+'" id="item-'+modalId+'">'+
       '<p><em>[ article title to come ]</em></p>'+
-      '<a class="btn btn-default" href="#'+modalId+'">Read now</a>'+
+      '<a class="btn btn-default read-now" href="#'+modalId+'">Read now</a>'+
       '<button class="btn btn-default mark">'+$readText+'</button>'+
       '<button class="btn btn-default remove">Remove from list</button>'+
       '</div>';
@@ -441,27 +466,52 @@ $(function () {
     $('#sidebar .caption').append(readingListItem);
 
     var newArticleText = '<div id="'+modalId+'" class="new-article">'+
-      '<h2>'+$modalTitle+'</h2>'+
-      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
-      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
-      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
-      '<p>Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here. Article text will appear here.</p>'+
+      $('#article-'+modalId).html()+      
       '</div>';
-    $('.col-md-7').append(newArticleText);
+    $('.main-content').append(newArticleText);
   });
 
 
   // remove from reading list
   $(document).on( 'click', '.remove', function(){
-    if(confirm('Are you sure you would like to remove this item from your reading list?')) {
-      $(this).parent('div').remove();
+    
+    var confirmMsg = '<div class="confirmMsg">'+
+      '<div>Are you sure you would like to remove this item from your reading list?</div>'+
+      '<button class="btn btn-default confirm-yes">Yes</button>'+
+      '<button class="btn btn-default confirm-no">No</button>'+
+      '</div>';
+
+    $(this).parent('div').append(confirmMsg);
+
+    $('.confirm-yes').click( function(){
+    //if(confirm('Are you sure you would like to remove this item from your reading list?')) {
+      var articleId = $(this).parent().parent('div').children('a').attr('href').replace('#','');
+      // remove content div
+      $('#'+articleId).remove();
+      // remove reading list item
+      $(this).parent().parent('div').remove();
+
       // show "There are no items..." message if user just removed last reading list item
       if($('#sidebar p').not('.no-items').length < 1) {
         $('.no-items').fadeIn();        
       }
-    }
+
+      $('.confirmMsg').remove();
+    });
+
+    $('.confirm-no').click( function(){ 
+      $('.confirmMsg').remove();
+    });
   });
-})
+
+
+  // get "article" parameter from url and display the appropriate content
+  var articleIdVal = window.location.search.replace('?article=','');
+  if(articleIdVal !== '') {
+    $('.main-content').html($('#article-'+articleIdVal).html());
+  }
+
+});
 </script>
 
 </body>
