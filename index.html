@@ -43,26 +43,41 @@
       }
     }
     
-    #sidebar h3 {
-      margin-top: 10px;
-      text-align: center;
+    .btn-primary { 
+      background-color: #A2DED0; 
+      border-color: #A2DED0; 
+      color: #000;
     }
 
-    #sidebar p {
-      border-top: 1px solid #ccc;
-      margin-top: 1em;
-      padding-top: 1em;
+      .btn-primary:hover {
+        background-color: #B5E5D9;
+        color: #000;
+      }
+
+    .reading-list { 
+      background-color: #A2DED0; 
     }
+
+      .reading-list h3 {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .reading-list p {
+        border-top: 1px solid rgba(0,0,0,0.25);
+        margin-top: 1em;
+        padding-top: 1em;
+      }
 
     .affix,.affix-top {
       position: static;
     }
     
-    .thumbnail {
+    /*.thumbnail {
       background-color: #EEE;
     }
 
-    /*.thumbnail > .caption {
+    .thumbnail > .caption {
       color: ;
     }*/
 
@@ -115,16 +130,35 @@
     }
     
     .bgcolor {
-    background-color: #E0EEEE;
-      }
+      background-color: #E0EEEE;
+    }
 
     .normcolor {
       color: #333;		
     }
 
     .lightgrey {
-      color: #b8b8b8; 	
+      color: rgba(0,0,0,0.25); 	
     }
+
+    .confirmMsg {
+      background-color: #FFD700;
+      margin-top: 3px;
+      padding: 1em;
+    }
+
+      .confirmMsg div {
+        margin-bottom: 0.5em;
+      }
+      
+      .confirmMsg .btn {
+        background-color: #FFE766;
+      }
+
+      .confirm-no {
+        float: right;
+      }
+
   </style>
 
 </head>
@@ -177,58 +211,34 @@
             </p>
             
           <hr> 
-          <div class="col-md-12 bgcolor">
-              <h2>More News</h2>
-          </div>   
-          <div class="col-md-6 bgcolor">
-              <h3> Conservative suing University of Iowa plans book about her bias case </h3>
-              <small><p >A woman who claims the University of Iowa law school rejected her for faculty jobs because of her conservative beliefs is writing a book about her discrimination lawsuit even before the case is over, her attorney confirmed Thursday.</p></small>
-       
-              <p><a href="http://www.omaha.com/news/iowa/conservative-suing-university-of-iowa-plans-book-about-her-bias/article_f9aad52c-ded0-11e4-baf7-3709635eb2e1.html" target="_blank"class="btn btn-default" role="button">View details </a></p>
-          </div>
-          <div class="col-md-6 bgcolor">
-              <h3> Letter writing's role to be in spotlight at Neihardt Spring Conference </h3>
-              <small><p>The annual Neihardt Spring Conference on April 25 will focus on the role of letters for people living in the Great Plains region in the 19th and 20th centuries and will address the role of letter-writing in American history.</p></small>
+          <div class="bgcolor clearfix">
+            <div class="col-md-12">
+                <h2>More News</h2>
+            </div>   
+            <div class="col-md-6">
+                <h3> Conservative suing University of Iowa plans book about her bias case </h3>
+                <small><p >A woman who claims the University of Iowa law school rejected her for faculty jobs because of her conservative beliefs is writing a book about her discrimination lawsuit even before the case is over, her attorney confirmed Thursday.</p></small>
+         
+                <p><a href="http://www.omaha.com/news/iowa/conservative-suing-university-of-iowa-plans-book-about-her-bias/article_f9aad52c-ded0-11e4-baf7-3709635eb2e1.html" target="_blank"class="btn btn-default" role="button">View details </a></p>
+            </div>
+            <div class="col-md-6">
+                <h3> Letter writing's role to be in spotlight at Neihardt Spring Conference </h3>
+                <small><p>The annual Neihardt Spring Conference on April 25 will focus on the role of letters for people living in the Great Plains region in the 19th and 20th centuries and will address the role of letter-writing in American history.</p></small>
 
-              <p><a href="http://www.omaha.com/news/nebraska/letter-writing-s-role-in-history-to-be-in-spotlight/article_219a9a64-18df-5d63-a8aa-914079882a19.html" target="_blank" class="btn btn-default" role="button">View details </a></p>
-          </div>
-          <!-- <div class="col-md-4">
-              <h2>Heading</h2>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-              <p><a class="btn btn-default" href="#" role="button">View details </a></p> 
-          </div> -->
-            
+                <p><a href="http://www.omaha.com/news/nebraska/letter-writing-s-role-in-history-to-be-in-spotlight/article_219a9a64-18df-5d63-a8aa-914079882a19.html" target="_blank" class="btn btn-default" role="button">View details </a></p>
+            </div>
+          </div>            
            
         </div> <!-- end div content -->
         
-        <div class="col-md-3">  
-            <!--        
-            <div class="list-group" id="sidebar">
-              <a href="#" class="list-group-item">
-                Link 1
-              </a>
-              <a href="#" class="list-group-item">Responsive
-              </a>
-              <a href="#" class="list-group-item">Mobile First
-              </a>
-              <a href="#" class="list-group-item">CSS 3
-              </a>
-              <a href="#" class="list-group-item">HTML 5
-              </a>
-            </div> 
-            -->
-            <div class="thumbnail" id="sidebar" style="background-color:#A2DED0  ">
-                <div class="caption">
-                    <h3>Your Reading List</h3>
-                    <p class="no-items">There are no items in your reading list.</p>
-                    <!--p><em>Article Title</em></p>
-                    <a href="#" class="btn btn-default" role="button">Read <br>now</a>
-                    <a href="#" class="btn btn-default" role="button">Mark<br>as read</a>
-                    <a href="#" class="btn btn-default" role="button">Remove <br>from list</a-->
 
-                </div>
-            </div> 
+        <div class="col-md-3">  
+          <div class="thumbnail reading-list" id="sidebar">
+              <div class="caption">
+                  <h3>Your Reading List</h3>
+                  <p class="no-items">There are no items in your reading list.</p>
+              </div>
+          </div> 
         </div> 
 
         <!-- Article 2 -->
@@ -389,6 +399,8 @@ $(function () {
     setTimeout(function(){ 
       $(this).parent().parent().parent().parent().parent().attr('data-toggle','popover');
     }, 5000);
+
+    return false;
   });
 
 
@@ -451,21 +463,38 @@ $(function () {
 
   // remove from reading list
   $(document).on( 'click', '.remove', function(){
-    if(confirm('Are you sure you would like to remove this item from your reading list?')) {
-      var articleId = $(this).parent('div').children('a').attr('href').replace('#','');
+    
+    var confirmMsg = '<div class="confirmMsg">'+
+      '<div>Are you sure you would like to remove this item from your reading list?</div>'+
+      '<button class="btn btn-default confirm-yes">Yes</button>'+
+      '<button class="btn btn-default confirm-no">No</button>'+
+      '</div>';
+
+    $(this).parent('div').append(confirmMsg);
+
+    $('.confirm-yes').click( function(){
+    //if(confirm('Are you sure you would like to remove this item from your reading list?')) {
+      var articleId = $(this).parent().parent('div').children('a').attr('href').replace('#','');
       // remove content div
       $('#'+articleId).remove();
       // remove reading list item
-      $(this).parent('div').remove();
+      $(this).parent().parent('div').remove();
 
       // show "There are no items..." message if user just removed last reading list item
       if($('#sidebar p').not('.no-items').length < 1) {
         $('.no-items').fadeIn();        
       }
-    }
+
+      $('.confirmMsg').remove();
+    });
+
+    $('.confirm-no').click( function(){ 
+      $('.confirmMsg').remove();
+    });
   });
 
 
+  // get "article" parameter from url and display the appropriate content
   var articleIdVal = window.location.search.replace('?article=','');
   if(articleIdVal !== '') {
     $('.main-content').html($('#article-'+articleIdVal).html());
